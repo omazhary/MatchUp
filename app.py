@@ -28,7 +28,7 @@ def generate():
         print(pairs)
         return json.dumps({'message': pairs})
     else:
-        return json.dumps({'error': '<span >You need at least 3 participants for this to be any fun!!</span>'})
+        return json.dumps({'error': 'You need at least 3 participants for this to be any fun!!'})
 
 if __name__ == "__main__":
     app.run()
