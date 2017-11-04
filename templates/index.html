@@ -27,6 +27,24 @@
                 margin-right: auto;
             }
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#btn_generate').click(function() {
+                    $.ajax({
+                        url: '/generate',
+                        data: $('form').serialize(),
+                        type: 'POST',
+                        success: function(response) {
+                            console.log(response);
+                        },
+                        error: function(error) {
+                            console.log(error)
+                        }
+                    });
+                });
+            });
+        </script>
     </head>
     <body>
         <h1 style="text-align: center">MatchUp</h1>
@@ -38,7 +56,7 @@
                 <form class="pure-form">
                     <h2 style="text-align: center">Participants</h2>
                     <textarea id="participants" name="participants" cols="30" rows="10"></textarea>
-                    <button class="pure-button pure-button-primary" id="btn_generate" name="btn_generate">Generate Pairs</button>
+                    <button class="pure-button pure-button-primary" id="btn_generate" name="btn_generate" type="button">Generate Pairs</button>
                 </form>
             </div>
             <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
