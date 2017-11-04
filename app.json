@@ -1,0 +1,11 @@
+{
+  "name": "omazhary-matchup",
+  "description": "A Flask app on Heroku for Adversarial Games",
+  "keywords": [
+    "flask",
+    "python"
+  ],
+  "repository": "https://github.com/omazhary/MatchUp",
+  "addons": [
+  ]
+}
