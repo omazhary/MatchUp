@@ -12,3 +12,4 @@ verify_ssl = true
 [packages]
 
 flask = "*"
+Jinja2 = ">=2.10.1"
